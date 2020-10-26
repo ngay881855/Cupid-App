@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CupidAppViewController.swift
 //  Cupid App
 //
 //  Created by Ngay Vong on 10/25/20.
@@ -7,22 +7,25 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CupidAppViewController: UIViewController {
 
     @IBOutlet private weak var cardsContentView: UIView!
     @IBOutlet private weak var loadDataActivityIndicator: UIActivityIndicatorView!
     
     var model: CupidViewModel?
-    //var personView: PersonView?
+    var favoriteViewModel: FavoriteViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.title = "Cupid App"
         
-        self.view.bringSubviewToFront(loadDataActivityIndicator)
-        self.loadDataActivityIndicator.startAnimating()
-        model = CupidViewModel(delegate: self)
+        model = CupidViewModel()
+        model?.delegate = self
         model?.reloadData()
+        
+        favoriteViewModel = FavoriteViewModel()
+        favoriteViewModel?.delegate = self
     }
     
     @IBAction private func reloadData(_ sender: Any) {
@@ -30,7 +33,11 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: CupidViewModelDelegate {
+extension CupidAppViewController: CupidViewModelDelegate {
+    func addPersonToFavoriteList(person: Person) {
+        self.favoriteViewModel?.addPerson(person: person)
+    }
+    
     func startActivityIndicator() {
         self.loadDataActivityIndicator.startAnimating()
     }
@@ -54,4 +61,7 @@ extension ViewController: CupidViewModelDelegate {
     func failed(error: CustomError) {
         print(error)
     }
+}
+
+extension CupidAppViewController: FavoriteViewModelDelegate {
 }

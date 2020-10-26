@@ -20,13 +20,15 @@ protocol CupidViewModelDelegate: AnyObject {
     func startActivityIndicator()
     
     func stopActivityIndicator()
+    
+    func addPersonToFavoriteList(person: Person)
 }
 
 class CupidViewModel {
     
     // MARK: - Private properties
     
-    weak private var delegate: CupidViewModelDelegate?
+    weak var delegate: CupidViewModelDelegate?
     
     private var dataSource: [Person] = []
     private var listPersonViews: [PersonView] = [] {
@@ -37,10 +39,6 @@ class CupidViewModel {
                 }
             }
         }
-    }
-    
-    required init(delegate: CupidViewModelDelegate) { //, containerDelegate: ) {
-        self.delegate = delegate
     }
     
     func reloadData() {
@@ -114,8 +112,8 @@ extension CupidViewModel: PersonViewDelegate {
         self.removePersonView()
     }
     
-    func didSwipeRight() {
-        // add to favorite
-        print("add to favorite")
+    func didSwipeRight(person: Person) {
+        self.delegate?.addPersonToFavoriteList(person: person)
+        self.removePersonView()
     }
 }

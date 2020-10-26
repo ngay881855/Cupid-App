@@ -30,6 +30,17 @@ struct Person: Decodable {
         let fullName = "\(name?.first ?? "") \(name?.last ?? "")"
         return fullName
     }
+    
+    var address: String {
+        let address = "\(location?.city ?? ""), \(location?.state ?? ""), \(location?.city ?? "")"
+        return address
+    }
+    
+    var age: String {
+        let age = dateOfBirth?.age ?? 0
+        let ageStr = age != 0 ? "\(age)" : ""
+        return ageStr
+    }
 }
 
 struct Name: Decodable {

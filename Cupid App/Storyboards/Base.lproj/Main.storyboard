@@ -1,29 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="28q-7X-gyv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pUJ-ZY-NEr">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Cupid App View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Cupid_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CupidAppViewController" customModule="Cupid_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Dos-y5-vKo">
-                                <rect key="frame" x="197" y="438" width="20" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </activityIndicatorView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1xF-0x-8qk">
-                                <rect key="frame" x="47" y="145" width="320" height="607"/>
+                                <rect key="frame" x="47" y="145" width="320" height="558"/>
                                 <color key="backgroundColor" red="0.92146831750000002" green="0.92162626979999995" blue="0.92145836349999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Dos-y5-vKo">
+                                <rect key="frame" x="189" y="430" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.89630615709999995" green="0.30230629440000001" blue="0.32704985139999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.92146831750000002" green="0.92162626979999995" blue="0.92145836349999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -52,12 +54,124 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1050.7246376811595" y="67.633928571428569"/>
+            <point key="canvasLocation" x="1960.8695652173915" y="67.633928571428569"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Favorite People-->
+        <scene sceneID="8im-Qt-Gwd">
+            <objects>
+                <navigationController title="Favorite People" automaticallyAdjustsScrollViewInsets="NO" id="WmX-JT-xTU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favorite People" image="small-hearts" id="VNQ-OM-rKW"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6ie-s2-Xld">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="9rg-aC-aSh" kind="relationship" relationship="rootViewController" id="zPQ-nA-fox"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n8L-Cb-7ii" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1051" y="753"/>
+        </scene>
+        <!--Favorite View Controller-->
+        <scene sceneID="stm-G1-6MP">
+            <objects>
+                <viewController storyboardIdentifier="FavoriteViewController" id="9rg-aC-aSh" customClass="FavoriteViewController" customModule="Cupid_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QDR-VN-XrX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nxy-HV-jST">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FavoritePersonTableViewCell" rowHeight="114" id="McN-xt-XCJ" customClass="FavoritePersonTableViewCell" customModule="Cupid_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="114"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="McN-xt-XCJ" id="o3L-K8-E8l">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="114"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KcA-cC-fea">
+                                                    <rect key="frame" x="10" y="7" width="100" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="0Xa-qy-Iy8"/>
+                                                        <constraint firstAttribute="width" constant="100" id="Wxq-kP-lG6"/>
+                                                        <constraint firstAttribute="height" constant="100" id="xvM-uY-NzM"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="2vP-L9-aJP">
+                                                    <rect key="frame" x="120" y="21" width="264" height="72"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="sXj-Id-DLX">
+                                                            <rect key="frame" x="0.0" y="0.0" width="264" height="38.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3bS-0u-BFp">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="132" height="38.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wU2-j6-5Kk">
+                                                                    <rect key="frame" x="132" y="0.0" width="132" height="38.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbh-5t-osC">
+                                                            <rect key="frame" x="0.0" y="38.5" width="264" height="33.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <color key="textColor" systemColor="systemGray3Color"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="KcA-cC-fea" firstAttribute="centerY" secondItem="o3L-K8-E8l" secondAttribute="centerY" id="0Tu-RK-hq7"/>
+                                                <constraint firstItem="KcA-cC-fea" firstAttribute="leading" secondItem="o3L-K8-E8l" secondAttribute="leading" constant="10" id="WY2-lO-LVO"/>
+                                                <constraint firstItem="2vP-L9-aJP" firstAttribute="top" secondItem="o3L-K8-E8l" secondAttribute="topMargin" constant="10" id="cxs-Rh-YMZ"/>
+                                                <constraint firstItem="2vP-L9-aJP" firstAttribute="leading" secondItem="KcA-cC-fea" secondAttribute="trailing" constant="10" id="g2Z-Pc-gG6"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="2vP-L9-aJP" secondAttribute="bottom" constant="10" id="ges-7X-V6P"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="2vP-L9-aJP" secondAttribute="trailing" constant="10" id="sbx-FP-pcE"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="addressLabel" destination="bbh-5t-osC" id="rJn-Kz-V7I"/>
+                                            <outlet property="ageLabel" destination="wU2-j6-5Kk" id="cKM-1v-hwV"/>
+                                            <outlet property="fullNameLabel" destination="3bS-0u-BFp" id="ZFC-nG-QmG"/>
+                                            <outlet property="personImageView" destination="KcA-cC-fea" id="G0S-s7-GBc"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="9rg-aC-aSh" id="f8B-s7-HaX"/>
+                                    <outlet property="delegate" destination="9rg-aC-aSh" id="hFM-Ci-4iC"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wE8-ey-gkO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nxy-HV-jST" firstAttribute="leading" secondItem="wE8-ey-gkO" secondAttribute="leading" id="4rK-0a-dN5"/>
+                            <constraint firstItem="nxy-HV-jST" firstAttribute="top" secondItem="wE8-ey-gkO" secondAttribute="top" id="6wI-wp-NTB"/>
+                            <constraint firstItem="wE8-ey-gkO" firstAttribute="trailing" secondItem="nxy-HV-jST" secondAttribute="trailing" id="XFC-vI-Afu"/>
+                            <constraint firstItem="wE8-ey-gkO" firstAttribute="bottom" secondItem="nxy-HV-jST" secondAttribute="bottom" id="cZ0-Pe-qaN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="svz-GB-O7c"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uoy-AZ-8zS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1960.8695652173915" y="752.67857142857144"/>
+        </scene>
+        <!--Cupid App-->
         <scene sceneID="AOs-7v-c5Y">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="28q-7X-gyv" sceneMemberID="viewController">
+                <navigationController title="Cupid App" automaticallyAdjustsScrollViewInsets="NO" id="28q-7X-gyv" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Cupid" image="heart-with-arrow" id="zy2-PJ-9Sw"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0aj-bq-YhB">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -70,11 +184,38 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kns-GZ-Hpp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140.57971014492756" y="67.633928571428569"/>
+            <point key="canvasLocation" x="1050.7246376811595" y="67.633928571428569"/>
+        </scene>
+        <!--Cupid App-->
+        <scene sceneID="wJn-yx-8VX">
+            <objects>
+                <tabBarController title="Cupid App" automaticallyAdjustsScrollViewInsets="NO" id="pUJ-ZY-NEr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jxw-Wh-CcE">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="28q-7X-gyv" kind="relationship" relationship="viewControllers" id="z02-MP-jv3"/>
+                        <segue destination="WmX-JT-xTU" kind="relationship" relationship="viewControllers" id="npH-rD-nd6"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BxW-FL-yTb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="62" y="343"/>
         </scene>
     </scenes>
     <resources>
         <image name="cloud-refresh" width="50" height="50"/>
+        <image name="heart-with-arrow" width="30" height="30"/>
         <image name="love" width="48" height="48"/>
+        <image name="small-hearts" width="30" height="30"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

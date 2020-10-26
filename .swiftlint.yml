@@ -138,6 +138,7 @@ excluded:
 - Carthage
 - Pods
 - SDWebImage
+- Cupid_AppTests
 
 force_unwrapping: error
 

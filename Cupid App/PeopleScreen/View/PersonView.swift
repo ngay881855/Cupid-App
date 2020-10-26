@@ -16,7 +16,7 @@ enum SwipeAction: Int {
 
 protocol PersonViewDelegate: AnyObject {
     func didSwipeLeft()
-    func didSwipeRight()
+    func didSwipeRight(person: Person)
 }
 
 class PersonView: UIView {
@@ -26,34 +26,36 @@ class PersonView: UIView {
     @IBOutlet private weak var fullNameLabel: UILabel!
     @IBOutlet private weak var panGestureRecognizer: UIPanGestureRecognizer!
     
+    private var _person: Person?
+    
+    var person: Person {
+        return self._person ?? Person()
+    }
+    
     // MARK: - Public properties
     weak var delegate: PersonViewDelegate?
     
     var originalPoint = CGPoint()
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupView()
-    }
-    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        setupView()
     }
     
     /*
      * Initializing View
      */
     private func setupView() {
-        layer.cornerRadius = bounds.width / 20
-        layer.shadowRadius = 3
-        layer.shadowOpacity = 0.4
-        layer.shadowOffset = CGSize(width: 0.5, height: 3)
-        layer.shadowColor = UIColor.darkGray.cgColor
+        layer.cornerRadius = 10
         clipsToBounds = true
         backgroundColor = .white
     }
     
     func configUIData(with person: Person) {
+        self._person = person
+        
+        imageView.layer.cornerRadius = 10
+        
         guard let url = URL(string: person.picture?.large ?? "") else {
             return
         }
@@ -107,12 +109,11 @@ class PersonView: UIView {
     
     private func performSwipeCompletion(swipeAction: SwipeAction) {
         switch swipeAction {
-        
         case .left:
             self.delegate?.didSwipeLeft()
             
         case .right:
-            self.delegate?.didSwipeRight()
+            self.delegate?.didSwipeRight(person: person)
             
         case .none:
             break
