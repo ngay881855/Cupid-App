@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3FE5422C58EC6CB805363AD0 /* Pods_Cupid_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF167A7100211D10B8ACA9A /* Pods_Cupid_AppTests.framework */; };
+		BB975E6B7BB049DA1100CFB8 /* Pods_Cupid_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 276AAEEF05CDF43F4EB7BD3D /* Pods_Cupid_App.framework */; };
+		E0482755D3993CCE7E9DF43C /* Pods_Cupid_App_Cupid_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC3F3C9D13CD74B65D405AED /* Pods_Cupid_App_Cupid_AppUITests.framework */; };
+		FF2AE4C025473400004D7719 /* CupidViewModel+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2AE4BF25473400004D7719 /* CupidViewModel+Ext.swift */; };
 		FFE29D0B254675DB00107F00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE29D0A254675DB00107F00 /* AppDelegate.swift */; };
 		FFE29D0D254675DB00107F00 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE29D0C254675DB00107F00 /* SceneDelegate.swift */; };
 		FFE29D0F254675DB00107F00 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE29D0E254675DB00107F00 /* ViewController.swift */; };
@@ -15,6 +19,12 @@
 		FFE29D17254675DD00107F00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE29D15254675DD00107F00 /* LaunchScreen.storyboard */; };
 		FFE29D22254675DD00107F00 /* CupidAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE29D21254675DD00107F00 /* CupidAppTests.swift */; };
 		FFE29D2D254675DD00107F00 /* CupidAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE29D2C254675DD00107F00 /* CupidAppUITests.swift */; };
+		FFE29D57254679CF00107F00 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE29D56254679CF00107F00 /* Person.swift */; };
+		FFE29D6525467E3D00107F00 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE29D6425467E3D00107F00 /* NetworkManager.swift */; };
+		FFE29D6F25467F7E00107F00 /* CupidViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE29D6E25467F7E00107F00 /* CupidViewModel.swift */; };
+		FFE29D772546868200107F00 /* PersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE29D762546868200107F00 /* PersonView.swift */; };
+		FFE29D7C254686BD00107F00 /* PersonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFE29D7B254686BD00107F00 /* PersonView.xib */; };
+		FFE29D822546944300107F00 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE29D812546944300107F00 /* UIView+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +45,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E82BFFF439CBAE8523A011C /* Pods-Cupid App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cupid App.release.xcconfig"; path = "Target Support Files/Pods-Cupid App/Pods-Cupid App.release.xcconfig"; sourceTree = "<group>"; };
+		276AAEEF05CDF43F4EB7BD3D /* Pods_Cupid_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cupid_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BF167A7100211D10B8ACA9A /* Pods_Cupid_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cupid_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4425441A5C839D28BDA41CD1 /* Pods-Cupid App-Cupid AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cupid App-Cupid AppUITests.release.xcconfig"; path = "Target Support Files/Pods-Cupid App-Cupid AppUITests/Pods-Cupid App-Cupid AppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		521D2250BEA60E8334B13C54 /* Pods-Cupid App-Cupid AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cupid App-Cupid AppUITests.debug.xcconfig"; path = "Target Support Files/Pods-Cupid App-Cupid AppUITests/Pods-Cupid App-Cupid AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		56F2FF6F7B071F6C0AE1323B /* Pods-Cupid App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cupid App.debug.xcconfig"; path = "Target Support Files/Pods-Cupid App/Pods-Cupid App.debug.xcconfig"; sourceTree = "<group>"; };
+		A29D1222F14589B81F1E472F /* Pods-Cupid AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cupid AppTests.debug.xcconfig"; path = "Target Support Files/Pods-Cupid AppTests/Pods-Cupid AppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B89E302174FE0C1A8CA690C8 /* Pods-Cupid AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cupid AppTests.release.xcconfig"; path = "Target Support Files/Pods-Cupid AppTests/Pods-Cupid AppTests.release.xcconfig"; sourceTree = "<group>"; };
+		DC3F3C9D13CD74B65D405AED /* Pods_Cupid_App_Cupid_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cupid_App_Cupid_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF2AE4BF25473400004D7719 /* CupidViewModel+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CupidViewModel+Ext.swift"; sourceTree = "<group>"; };
 		FFE29D07254675DB00107F00 /* Cupid App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cupid App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFE29D0A254675DB00107F00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFE29D0C254675DB00107F00 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +69,12 @@
 		FFE29D28254675DD00107F00 /* Cupid AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cupid AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFE29D2C254675DD00107F00 /* CupidAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupidAppUITests.swift; sourceTree = "<group>"; };
 		FFE29D2E254675DD00107F00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFE29D56254679CF00107F00 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		FFE29D6425467E3D00107F00 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkManager.swift; path = "Network Layer/NetworkManager.swift"; sourceTree = "<group>"; };
+		FFE29D6E25467F7E00107F00 /* CupidViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupidViewModel.swift; sourceTree = "<group>"; };
+		FFE29D762546868200107F00 /* PersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonView.swift; sourceTree = "<group>"; };
+		FFE29D7B254686BD00107F00 /* PersonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonView.xib; sourceTree = "<group>"; };
+		FFE29D812546944300107F00 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB975E6B7BB049DA1100CFB8 /* Pods_Cupid_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FE5422C58EC6CB805363AD0 /* Pods_Cupid_AppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +98,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0482755D3993CCE7E9DF43C /* Pods_Cupid_App_Cupid_AppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		119926BF097E6D05ED845CDB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				276AAEEF05CDF43F4EB7BD3D /* Pods_Cupid_App.framework */,
+				DC3F3C9D13CD74B65D405AED /* Pods_Cupid_App_Cupid_AppUITests.framework */,
+				3BF167A7100211D10B8ACA9A /* Pods_Cupid_AppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		93C1FBA326777F7DADA0448E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				56F2FF6F7B071F6C0AE1323B /* Pods-Cupid App.debug.xcconfig */,
+				1E82BFFF439CBAE8523A011C /* Pods-Cupid App.release.xcconfig */,
+				521D2250BEA60E8334B13C54 /* Pods-Cupid App-Cupid AppUITests.debug.xcconfig */,
+				4425441A5C839D28BDA41CD1 /* Pods-Cupid App-Cupid AppUITests.release.xcconfig */,
+				A29D1222F14589B81F1E472F /* Pods-Cupid AppTests.debug.xcconfig */,
+				B89E302174FE0C1A8CA690C8 /* Pods-Cupid AppTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FFE29CFE254675DB00107F00 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +135,8 @@
 				FFE29D20254675DD00107F00 /* Cupid AppTests */,
 				FFE29D2B254675DD00107F00 /* Cupid AppUITests */,
 				FFE29D08254675DB00107F00 /* Products */,
+				93C1FBA326777F7DADA0448E /* Pods */,
+				119926BF097E6D05ED845CDB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +153,10 @@
 		FFE29D09254675DB00107F00 /* Cupid App */ = {
 			isa = PBXGroup;
 			children = (
+				FFE29D802546943200107F00 /* Extensions */,
+				FFE29D6325467DBD00107F00 /* Network Layer */,
+				FFE29D532546794000107F00 /* FavoriteScreen */,
+				FFE29D522546791B00107F00 /* PeopleScreen */,
 				FFE29D4B2546771B00107F00 /* Storyboards */,
 				FFE29D4A2546770100107F00 /* Support Files */,
 				FFE29D0E254675DB00107F00 /* ViewController.swift */,
@@ -144,6 +202,65 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		FFE29D522546791B00107F00 /* PeopleScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FFE29D6D25467F4100107F00 /* View */,
+				FFE29D6C25467F3A00107F00 /* ViewModel */,
+				FFE29D54254679BC00107F00 /* Model */,
+			);
+			path = PeopleScreen;
+			sourceTree = "<group>";
+		};
+		FFE29D532546794000107F00 /* FavoriteScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FavoriteScreen;
+			sourceTree = "<group>";
+		};
+		FFE29D54254679BC00107F00 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FFE29D56254679CF00107F00 /* Person.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FFE29D6325467DBD00107F00 /* Network Layer */ = {
+			isa = PBXGroup;
+			children = (
+				FFE29D6425467E3D00107F00 /* NetworkManager.swift */,
+			);
+			name = "Network Layer";
+			sourceTree = "<group>";
+		};
+		FFE29D6C25467F3A00107F00 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FFE29D6E25467F7E00107F00 /* CupidViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FFE29D6D25467F4100107F00 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FFE29D762546868200107F00 /* PersonView.swift */,
+				FFE29D7B254686BD00107F00 /* PersonView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FFE29D802546943200107F00 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FFE29D812546944300107F00 /* UIView+Ext.swift */,
+				FF2AE4BF25473400004D7719 /* CupidViewModel+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -151,10 +268,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FFE29D31254675DD00107F00 /* Build configuration list for PBXNativeTarget "Cupid App" */;
 			buildPhases = (
+				9EFC8E7996056E272027A500 /* [CP] Check Pods Manifest.lock */,
 				FFE29D03254675DB00107F00 /* Sources */,
 				FFE29D04254675DB00107F00 /* Frameworks */,
 				FFE29D05254675DB00107F00 /* Resources */,
 				FFE29D402546764D00107F00 /* ShellScript */,
+				B26D3E5F5CFF15519B91FA32 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -169,6 +288,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FFE29D34254675DD00107F00 /* Build configuration list for PBXNativeTarget "Cupid AppTests" */;
 			buildPhases = (
+				1885CA4804354CE070E67D53 /* [CP] Check Pods Manifest.lock */,
 				FFE29D19254675DD00107F00 /* Sources */,
 				FFE29D1A254675DD00107F00 /* Frameworks */,
 				FFE29D1B254675DD00107F00 /* Resources */,
@@ -187,9 +307,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FFE29D37254675DD00107F00 /* Build configuration list for PBXNativeTarget "Cupid AppUITests" */;
 			buildPhases = (
+				1414F67715B02565302F7DC8 /* [CP] Check Pods Manifest.lock */,
 				FFE29D24254675DD00107F00 /* Sources */,
 				FFE29D25254675DD00107F00 /* Frameworks */,
 				FFE29D26254675DD00107F00 /* Resources */,
+				27783F48DC50703AFB9F666E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -249,6 +371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFE29D17254675DD00107F00 /* LaunchScreen.storyboard in Resources */,
+				FFE29D7C254686BD00107F00 /* PersonView.xib in Resources */,
 				FFE29D14254675DD00107F00 /* Assets.xcassets in Resources */,
 				FFE29D12254675DB00107F00 /* Main.storyboard in Resources */,
 			);
@@ -271,6 +394,106 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1414F67715B02565302F7DC8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Cupid App-Cupid AppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1885CA4804354CE070E67D53 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Cupid AppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		27783F48DC50703AFB9F666E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Cupid App-Cupid AppUITests/Pods-Cupid App-Cupid AppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Cupid App-Cupid AppUITests/Pods-Cupid App-Cupid AppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Cupid App-Cupid AppUITests/Pods-Cupid App-Cupid AppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9EFC8E7996056E272027A500 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Cupid App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B26D3E5F5CFF15519B91FA32 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Cupid App/Pods-Cupid App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Cupid App/Pods-Cupid App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Cupid App/Pods-Cupid App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		FFE29D402546764D00107F00 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -295,9 +518,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFE29D822546944300107F00 /* UIView+Ext.swift in Sources */,
 				FFE29D0F254675DB00107F00 /* ViewController.swift in Sources */,
 				FFE29D0B254675DB00107F00 /* AppDelegate.swift in Sources */,
+				FFE29D57254679CF00107F00 /* Person.swift in Sources */,
 				FFE29D0D254675DB00107F00 /* SceneDelegate.swift in Sources */,
+				FFE29D6F25467F7E00107F00 /* CupidViewModel.swift in Sources */,
+				FFE29D6525467E3D00107F00 /* NetworkManager.swift in Sources */,
+				FFE29D772546868200107F00 /* PersonView.swift in Sources */,
+				FF2AE4C025473400004D7719 /* CupidViewModel+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +699,7 @@
 		};
 		FFE29D32254675DD00107F00 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56F2FF6F7B071F6C0AE1323B /* Pods-Cupid App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -490,6 +720,7 @@
 		};
 		FFE29D33254675DD00107F00 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E82BFFF439CBAE8523A011C /* Pods-Cupid App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -510,6 +741,7 @@
 		};
 		FFE29D35254675DD00107F00 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A29D1222F14589B81F1E472F /* Pods-Cupid AppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -532,6 +764,7 @@
 		};
 		FFE29D36254675DD00107F00 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B89E302174FE0C1A8CA690C8 /* Pods-Cupid AppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -554,6 +787,7 @@
 		};
 		FFE29D38254675DD00107F00 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 521D2250BEA60E8334B13C54 /* Pods-Cupid App-Cupid AppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -574,6 +808,7 @@
 		};
 		FFE29D39254675DD00107F00 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4425441A5C839D28BDA41CD1 /* Pods-Cupid App-Cupid AppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

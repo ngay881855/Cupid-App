@@ -137,6 +137,7 @@ trailing_whitespace:
 excluded:
 - Carthage
 - Pods
+- SDWebImage
 
 force_unwrapping: error
 
