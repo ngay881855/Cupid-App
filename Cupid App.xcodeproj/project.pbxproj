@@ -99,13 +99,10 @@
 		FFE29D09254675DB00107F00 /* Cupid App */ = {
 			isa = PBXGroup;
 			children = (
-				FFE29D0A254675DB00107F00 /* AppDelegate.swift */,
-				FFE29D0C254675DB00107F00 /* SceneDelegate.swift */,
+				FFE29D4B2546771B00107F00 /* Storyboards */,
+				FFE29D4A2546770100107F00 /* Support Files */,
 				FFE29D0E254675DB00107F00 /* ViewController.swift */,
-				FFE29D10254675DB00107F00 /* Main.storyboard */,
 				FFE29D13254675DD00107F00 /* Assets.xcassets */,
-				FFE29D15254675DD00107F00 /* LaunchScreen.storyboard */,
-				FFE29D18254675DD00107F00 /* Info.plist */,
 			);
 			path = "Cupid App";
 			sourceTree = "<group>";
@@ -126,6 +123,25 @@
 				FFE29D2E254675DD00107F00 /* Info.plist */,
 			);
 			path = "Cupid AppUITests";
+			sourceTree = "<group>";
+		};
+		FFE29D4A2546770100107F00 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FFE29D0A254675DB00107F00 /* AppDelegate.swift */,
+				FFE29D0C254675DB00107F00 /* SceneDelegate.swift */,
+				FFE29D18254675DD00107F00 /* Info.plist */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		FFE29D4B2546771B00107F00 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FFE29D10254675DB00107F00 /* Main.storyboard */,
+				FFE29D15254675DD00107F00 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -459,7 +475,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FFM24X5V87;
-				INFOPLIST_FILE = "Cupid App/Info.plist";
+				INFOPLIST_FILE = "Cupid App/Support Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -479,7 +495,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FFM24X5V87;
-				INFOPLIST_FILE = "Cupid App/Info.plist";
+				INFOPLIST_FILE = "Cupid App/Support Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
