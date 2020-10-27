@@ -38,7 +38,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="FkO-7e-LTG">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="cloud-refresh" id="exx-ZP-qAh">
-                            <color key="tintColor" red="0.54741168019999997" green="0.96948331590000003" blue="0.95791345829999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.0" green="0.4793452024" blue="0.99908632040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="reloadData:" destination="BYZ-38-t0r" id="uwB-S1-GWw"/>
                             </connections>

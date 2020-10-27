@@ -38,6 +38,12 @@ class FavoriteViewController: UIViewController {
     }
 }
 
+extension FavoriteViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        return favoriteViewModel.createLeadingSwipeAction(forRowAt: indexPath, in: tableView)
+    }
+}
+
 extension FavoriteViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         favoriteViewModel.numberOfRows()

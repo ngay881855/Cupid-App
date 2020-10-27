@@ -14,16 +14,13 @@ protocol FavoriteViewModelDelegate: AnyObject {
 
 class FavoriteViewModel {
     
-    var dataSource: [Person] = [] {
-        didSet {
-            self.delegate?.reloadTableView()
-        }
-    }
+    var dataSource: [Person] = []
     
     weak var delegate: FavoriteViewModelDelegate?
     
     func addPerson(person: Person) {
         dataSource.append(person)
+        delegate?.reloadTableView()
     }
     
     func numberOfRows() -> Int {
@@ -37,5 +34,13 @@ class FavoriteViewModel {
         
         cell.configUIDate(person: dataSource[indexPath.row])
         return cell
+    }
+    
+    func createLeadingSwipeAction(forRowAt indexPath: IndexPath, in tableView: UITableView) -> UISwipeActionsConfiguration? {
+        let contextualAction = UIContextualAction(style: .destructive, title: "Delete") { _, _, _ in
+            self.dataSource.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+        return UISwipeActionsConfiguration(actions: [contextualAction])
     }
 }
