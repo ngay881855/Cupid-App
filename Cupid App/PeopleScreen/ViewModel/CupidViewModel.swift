@@ -51,6 +51,11 @@ class CupidViewModel {
         self.delegate?.stopActivityIndicator()
     }
     
+    func addToFavorite() {
+        let personView = listPersonViews.last
+        personView?.performSwipeRightAction()
+    }
+    
     private func fetchUsers() {
         guard let url = URL(string: "https://randomuser.me/api/?results=10") else { return }
         

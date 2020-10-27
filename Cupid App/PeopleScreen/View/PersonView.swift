@@ -107,6 +107,16 @@ class PersonView: UIView {
         }
     }
     
+    func performSwipeRightAction() {
+        let personView = self
+        let moveDestination = CGPoint(x: personView.originalPoint.x + personView.bounds.width + personView.bounds.width / 2, y: personView.originalPoint.y + personView.bounds.height)
+        
+        UIView.animate(
+            withDuration: 0.25) { personView.center = moveDestination } completion: { _ in
+            self.performSwipeCompletion(swipeAction: .right)
+        }
+    }
+    
     private func performSwipeCompletion(swipeAction: SwipeAction) {
         switch swipeAction {
         case .left:

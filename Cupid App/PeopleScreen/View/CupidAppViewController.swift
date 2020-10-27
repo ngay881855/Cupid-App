@@ -13,7 +13,6 @@ class CupidAppViewController: UIViewController {
     @IBOutlet private weak var loadDataActivityIndicator: UIActivityIndicatorView!
     
     var model: CupidViewModel?
-    var favoriteViewModel: FavoriteViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,18 +23,32 @@ class CupidAppViewController: UIViewController {
         model?.delegate = self
         model?.reloadData()
         
-        favoriteViewModel = FavoriteViewModel()
-        favoriteViewModel?.delegate = self
+        setupNotificationForFavoriteViewController()
+    }
+    
+    private func setupNotificationForFavoriteViewController() {
+        if let viewControllers = self.tabBarController?.viewControllers {
+            for navigationViewController in viewControllers {
+                if let favoriteViewController = navigationViewController.children.first as? FavoriteViewController {
+                    NotificationCenter.default.addObserver(favoriteViewController, selector: #selector(favoriteViewController.addPersonToFavoriteList(_:)), name: .myNotificationKey, object: nil)
+                }
+            }
+        }
     }
     
     @IBAction private func reloadData(_ sender: Any) {
         model?.reloadData()
     }
+    
+    @IBAction private func addFavorite(_ sender: Any) {
+        model?.addToFavorite()
+    }
 }
 
 extension CupidAppViewController: CupidViewModelDelegate {
     func addPersonToFavoriteList(person: Person) {
-        self.favoriteViewModel?.addPerson(person: person)
+        let userInfo = ["person": person]
+        NotificationCenter.default.post(name: .myNotificationKey, object: nil, userInfo: userInfo)
     }
     
     func startActivityIndicator() {
@@ -61,7 +74,4 @@ extension CupidAppViewController: CupidViewModelDelegate {
     func failed(error: CustomError) {
         print(error)
     }
-}
-
-extension CupidAppViewController: FavoriteViewModelDelegate {
 }

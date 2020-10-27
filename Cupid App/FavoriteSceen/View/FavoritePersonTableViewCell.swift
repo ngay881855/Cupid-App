@@ -28,7 +28,7 @@ class FavoritePersonTableViewCell: UITableViewCell {
     func configUIDate(person: Person) {
         personImageView.layer.cornerRadius = personImageView.frame.width / 2
         
-        guard let url = URL(string: person.picture?.large ?? "") else {
+        guard let url = URL(string: person.picture?.medium ?? "") else {
             return
         }
         self.fullNameLabel.text = person.fullName
