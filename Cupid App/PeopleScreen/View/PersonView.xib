@@ -38,14 +38,28 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gld-DJ-AhH">
+                            <rect key="frame" x="0.0" y="616" width="414" height="49"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <items>
+                                <tabBarItem image="person" selectedImage="person" id="6gV-jA-laU" userLabel="Person"/>
+                                <tabBarItem image="calendar" selectedImage="calendar" id="eNa-AZ-Ic7" userLabel="Calendar"/>
+                                <tabBarItem title="" image="location" selectedImage="location" id="sUZ-Dv-VfG" userLabel="Location"/>
+                                <tabBarItem title="" image="call" selectedImage="call" id="xnh-9g-HyP" userLabel="Call"/>
+                                <tabBarItem title="" image="private-lock" selectedImage="private-lock" id="K7S-hC-hvS" userLabel="Lock"/>
+                            </items>
+                        </tabBar>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="G7L-kp-xJY" firstAttribute="centerX" secondItem="VN3-YI-ndD" secondAttribute="centerX" id="9qL-3A-yae"/>
+                        <constraint firstItem="gld-DJ-AhH" firstAttribute="leading" secondItem="VN3-YI-ndD" secondAttribute="leading" id="Dby-E5-GN4"/>
                         <constraint firstItem="HRh-d8-quI" firstAttribute="top" secondItem="VN3-YI-ndD" secondAttribute="top" constant="50" id="cJw-xJ-d4u"/>
+                        <constraint firstAttribute="bottom" secondItem="gld-DJ-AhH" secondAttribute="bottom" id="cxz-zs-iu2"/>
                         <constraint firstItem="HRh-d8-quI" firstAttribute="centerX" secondItem="VN3-YI-ndD" secondAttribute="centerX" id="o58-OY-kBA"/>
                         <constraint firstItem="COk-d7-ilf" firstAttribute="top" secondItem="G7L-kp-xJY" secondAttribute="bottom" constant="30" id="tnU-2w-6bz"/>
                         <constraint firstItem="G7L-kp-xJY" firstAttribute="top" secondItem="HRh-d8-quI" secondAttribute="bottom" constant="30" id="tti-ZB-8y4"/>
+                        <constraint firstAttribute="trailing" secondItem="gld-DJ-AhH" secondAttribute="trailing" id="u0h-ai-Fd1"/>
                         <constraint firstItem="COk-d7-ilf" firstAttribute="centerX" secondItem="VN3-YI-ndD" secondAttribute="centerX" id="yfX-bK-QBl"/>
                     </constraints>
                 </view>
@@ -76,6 +90,11 @@
         </panGestureRecognizer>
     </objects>
     <resources>
+        <image name="calendar" width="30" height="30"/>
+        <image name="call" width="30" height="30"/>
+        <image name="location" width="30" height="30"/>
+        <image name="person" width="30" height="30"/>
+        <image name="private-lock" width="30" height="30"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

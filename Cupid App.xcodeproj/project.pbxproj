@@ -15,6 +15,8 @@
 		FF2AE4CE254757A8004D7719 /* FavoritePersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2AE4CD254757A8004D7719 /* FavoritePersonTableViewCell.swift */; };
 		FF2AE4D325475CDD004D7719 /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2AE4D225475CDD004D7719 /* FavoriteViewModel.swift */; };
 		FF2AE4D825476E96004D7719 /* CupidViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2AE4D725476E96004D7719 /* CupidViewModelTest.swift */; };
+		FF36B1412549D0CF00EA1BB6 /* BirthdayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF36B1402549D0CF00EA1BB6 /* BirthdayView.swift */; };
+		FF36B1492549D0D900EA1BB6 /* BirthdayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF36B1482549D0D900EA1BB6 /* BirthdayView.xib */; };
 		FFE29D0B254675DB00107F00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE29D0A254675DB00107F00 /* AppDelegate.swift */; };
 		FFE29D0D254675DB00107F00 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE29D0C254675DB00107F00 /* SceneDelegate.swift */; };
 		FFE29D0F254675DB00107F00 /* CupidAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE29D0E254675DB00107F00 /* CupidAppViewController.swift */; };
@@ -63,6 +65,8 @@
 		FF2AE4CD254757A8004D7719 /* FavoritePersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePersonTableViewCell.swift; sourceTree = "<group>"; };
 		FF2AE4D225475CDD004D7719 /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
 		FF2AE4D725476E96004D7719 /* CupidViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupidViewModelTest.swift; sourceTree = "<group>"; };
+		FF36B1402549D0CF00EA1BB6 /* BirthdayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayView.swift; sourceTree = "<group>"; };
+		FF36B1482549D0D900EA1BB6 /* BirthdayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BirthdayView.xib; sourceTree = "<group>"; };
 		FFE29D07254675DB00107F00 /* Cupid App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cupid App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFE29D0A254675DB00107F00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFE29D0C254675DB00107F00 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -168,6 +172,31 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FF36B13A2549CAB500EA1BB6 /* PersonDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				FF36B13F2549CF9600EA1BB6 /* ViewModel */,
+				FF36B13E2549CEB900EA1BB6 /* View */,
+			);
+			path = PersonDetailView;
+			sourceTree = "<group>";
+		};
+		FF36B13E2549CEB900EA1BB6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FF36B1402549D0CF00EA1BB6 /* BirthdayView.swift */,
+				FF36B1482549D0D900EA1BB6 /* BirthdayView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FF36B13F2549CF9600EA1BB6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		FFE29CFE254675DB00107F00 = {
@@ -289,6 +318,7 @@
 		FFE29D6D25467F4100107F00 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FF36B13A2549CAB500EA1BB6 /* PersonDetailView */,
 				FFE29D0E254675DB00107F00 /* CupidAppViewController.swift */,
 				FFE29D762546868200107F00 /* PersonView.swift */,
 				FFE29D7B254686BD00107F00 /* PersonView.xib */,
@@ -415,6 +445,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFE29D17254675DD00107F00 /* LaunchScreen.storyboard in Resources */,
+				FF36B1492549D0D900EA1BB6 /* BirthdayView.xib in Resources */,
 				FFE29D7C254686BD00107F00 /* PersonView.xib in Resources */,
 				FFE29D14254675DD00107F00 /* Assets.xcassets in Resources */,
 				FFE29D12254675DB00107F00 /* Main.storyboard in Resources */,
@@ -569,6 +600,7 @@
 				FF2AE4CE254757A8004D7719 /* FavoritePersonTableViewCell.swift in Sources */,
 				FF2AE4C9254756F9004D7719 /* FavoriteViewController.swift in Sources */,
 				FF2AE4D325475CDD004D7719 /* FavoriteViewModel.swift in Sources */,
+				FF36B1412549D0CF00EA1BB6 /* BirthdayView.swift in Sources */,
 				FFE29D0D254675DB00107F00 /* SceneDelegate.swift in Sources */,
 				FFE29D6F25467F7E00107F00 /* CupidViewModel.swift in Sources */,
 				FFE29D6525467E3D00107F00 /* NetworkManager.swift in Sources */,
