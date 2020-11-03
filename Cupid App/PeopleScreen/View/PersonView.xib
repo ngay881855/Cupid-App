@@ -18,49 +18,38 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VN3-YI-ndD">
                     <rect key="frame" x="0.0" y="44" width="414" height="665"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HRh-d8-quI">
-                            <rect key="frame" x="87" y="50" width="240" height="240"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="240" id="IbK-MQ-x7S"/>
-                                <constraint firstAttribute="width" constant="240" id="xSU-ab-NtK"/>
-                            </constraints>
-                        </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My name is" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G7L-kp-xJY">
-                            <rect key="frame" x="163.5" y="320" width="87" height="21"/>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" systemColor="systemGray3Color"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="COk-d7-ilf">
-                            <rect key="frame" x="159" y="371" width="96" height="24"/>
-                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gld-DJ-AhH">
+                        <tabBar clipsSubviews="YES" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gld-DJ-AhH">
                             <rect key="frame" x="0.0" y="616" width="414" height="49"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="49" id="n5j-Rs-jJD"/>
+                            </constraints>
                             <items>
                                 <tabBarItem image="person" selectedImage="person" id="6gV-jA-laU" userLabel="Person"/>
-                                <tabBarItem image="calendar" selectedImage="calendar" id="eNa-AZ-Ic7" userLabel="Calendar"/>
-                                <tabBarItem title="" image="location" selectedImage="location" id="sUZ-Dv-VfG" userLabel="Location"/>
-                                <tabBarItem title="" image="call" selectedImage="call" id="xnh-9g-HyP" userLabel="Call"/>
-                                <tabBarItem title="" image="private-lock" selectedImage="private-lock" id="K7S-hC-hvS" userLabel="Lock"/>
+                                <tabBarItem tag="1" image="calendar" selectedImage="calendar" id="eNa-AZ-Ic7" userLabel="Calendar"/>
+                                <tabBarItem tag="2" title="" image="location" selectedImage="location" id="sUZ-Dv-VfG" userLabel="Location"/>
+                                <tabBarItem tag="3" title="" image="call" selectedImage="call" id="xnh-9g-HyP" userLabel="Call"/>
+                                <tabBarItem tag="4" title="" image="private-lock" selectedImage="private-lock" id="K7S-hC-hvS" userLabel="Lock"/>
                             </items>
+                            <color key="selectedImageTintColor" systemColor="systemBlueColor"/>
+                            <connections>
+                                <outlet property="delegate" destination="iN0-l3-epB" id="6ke-fI-NRu"/>
+                            </connections>
                         </tabBar>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C8Y-nV-j7k" userLabel="Person Detail View">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="616"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstItem="G7L-kp-xJY" firstAttribute="centerX" secondItem="VN3-YI-ndD" secondAttribute="centerX" id="9qL-3A-yae"/>
+                        <constraint firstItem="C8Y-nV-j7k" firstAttribute="leading" secondItem="VN3-YI-ndD" secondAttribute="leading" id="1mm-0k-qR4"/>
+                        <constraint firstAttribute="trailing" secondItem="C8Y-nV-j7k" secondAttribute="trailing" id="AkZ-kF-amE"/>
                         <constraint firstItem="gld-DJ-AhH" firstAttribute="leading" secondItem="VN3-YI-ndD" secondAttribute="leading" id="Dby-E5-GN4"/>
-                        <constraint firstItem="HRh-d8-quI" firstAttribute="top" secondItem="VN3-YI-ndD" secondAttribute="top" constant="50" id="cJw-xJ-d4u"/>
+                        <constraint firstItem="gld-DJ-AhH" firstAttribute="top" secondItem="C8Y-nV-j7k" secondAttribute="bottom" id="Ze5-yw-Cow"/>
                         <constraint firstAttribute="bottom" secondItem="gld-DJ-AhH" secondAttribute="bottom" id="cxz-zs-iu2"/>
-                        <constraint firstItem="HRh-d8-quI" firstAttribute="centerX" secondItem="VN3-YI-ndD" secondAttribute="centerX" id="o58-OY-kBA"/>
-                        <constraint firstItem="COk-d7-ilf" firstAttribute="top" secondItem="G7L-kp-xJY" secondAttribute="bottom" constant="30" id="tnU-2w-6bz"/>
-                        <constraint firstItem="G7L-kp-xJY" firstAttribute="top" secondItem="HRh-d8-quI" secondAttribute="bottom" constant="30" id="tti-ZB-8y4"/>
+                        <constraint firstItem="C8Y-nV-j7k" firstAttribute="top" secondItem="VN3-YI-ndD" secondAttribute="top" id="nRP-l6-I3Y"/>
                         <constraint firstAttribute="trailing" secondItem="gld-DJ-AhH" secondAttribute="trailing" id="u0h-ai-Fd1"/>
-                        <constraint firstItem="COk-d7-ilf" firstAttribute="centerX" secondItem="VN3-YI-ndD" secondAttribute="centerX" id="yfX-bK-QBl"/>
                     </constraints>
                 </view>
             </subviews>
@@ -75,9 +64,14 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="fullNameLabel" destination="COk-d7-ilf" id="gZY-QQ-WsZ"/>
-                <outlet property="imageView" destination="HRh-d8-quI" id="LnN-oM-l2t"/>
+                <outlet property="birthdayTabBarItem" destination="eNa-AZ-Ic7" id="esR-MV-NSN"/>
+                <outlet property="locationTabBarItem" destination="sUZ-Dv-VfG" id="hfe-Nh-zs4"/>
+                <outlet property="lockTabBarItem" destination="K7S-hC-hvS" id="iBL-fW-hXw"/>
                 <outlet property="panGestureRecognizer" destination="iVl-o5-Rcc" id="0wD-SU-Hul"/>
+                <outlet property="personDetailView" destination="C8Y-nV-j7k" id="uMi-rm-m9n"/>
+                <outlet property="personTabBarItem" destination="6gV-jA-laU" id="Usl-p9-rOa"/>
+                <outlet property="phoneTabBarItem" destination="xnh-9g-HyP" id="3dM-oy-LPM"/>
+                <outlet property="tabBar" destination="gld-DJ-AhH" id="iFw-Sd-kgG"/>
                 <outletCollection property="gestureRecognizers" destination="iVl-o5-Rcc" appends="YES" id="7J7-Uz-41M"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="114.17410714285714"/>
@@ -98,8 +92,8 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGray3Color">
-            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

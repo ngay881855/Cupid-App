@@ -37,13 +37,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="FkO-7e-LTG">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="cloud-refresh" id="exx-ZP-qAh">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="arrow.clockwise" catalog="system" id="exx-ZP-qAh">
                             <color key="tintColor" red="0.0" green="0.4793452024" blue="0.99908632040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="reloadData:" destination="BYZ-38-t0r" id="uwB-S1-GWw"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="love" id="mYX-A9-FjG">
+                        <barButtonItem key="rightBarButtonItem" image="love" id="mYX-A9-FjG">
+                            <inset key="imageInsets" minX="0.0" minY="-1" maxX="-8" maxY="-6"/>
                             <color key="tintColor" red="0.89630615709999995" green="0.30230629440000001" blue="0.32704985139999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="addFavorite:" destination="BYZ-38-t0r" id="1ag-mG-Up5"/>
@@ -215,7 +216,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="cloud-refresh" width="50" height="50"/>
+        <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
         <image name="heart-with-arrow" width="30" height="30"/>
         <image name="love" width="48" height="48"/>
         <image name="small-hearts" width="30" height="30"/>

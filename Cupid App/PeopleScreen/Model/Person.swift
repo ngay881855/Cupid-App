@@ -16,6 +16,8 @@ struct Person: Decodable {
     var name: Name?
     var location: Location?
     var dateOfBirth: DateOfBirth?
+    var phone: String?
+    var cell: String?
     var picture: Picture?
     
     enum CodingKeys: String, CodingKey {
@@ -23,6 +25,8 @@ struct Person: Decodable {
         case name
         case location
         case dateOfBirth = "dob"
+        case phone
+        case cell
         case picture
     }
     
@@ -32,7 +36,7 @@ struct Person: Decodable {
     }
     
     var address: String {
-        let address = "\(location?.city ?? ""), \(location?.state ?? ""), \(location?.city ?? "")"
+        let address = "\(location?.city ?? ""), \(location?.state ?? ""), \(location?.country ?? "")"
         return address
     }
     

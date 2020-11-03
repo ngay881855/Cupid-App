@@ -11,12 +11,25 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" restorationIdentifier="BirthdayView" id="iN0-l3-epB" customClass="BirthdayView" customModule="Cupid_App" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="584"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="VBb-jz-TsC">
+                    <rect key="frame" x="0.0" y="184" width="414" height="216"/>
+                </datePicker>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="VBb-jz-TsC" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="5WM-JF-FNN"/>
+                <constraint firstItem="VBb-jz-TsC" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="VwP-8N-s2Z"/>
+                <constraint firstItem="VBb-jz-TsC" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="y1b-Uy-diQ"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="datePicker" destination="VBb-jz-TsC" id="hkF-zr-QKQ"/>
+            </connections>
             <point key="canvasLocation" x="137.68115942028987" y="164.0625"/>
         </view>
     </objects>

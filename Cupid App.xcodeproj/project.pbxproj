@@ -10,11 +10,19 @@
 		3FE5422C58EC6CB805363AD0 /* Pods_Cupid_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BF167A7100211D10B8ACA9A /* Pods_Cupid_AppTests.framework */; };
 		BB975E6B7BB049DA1100CFB8 /* Pods_Cupid_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 276AAEEF05CDF43F4EB7BD3D /* Pods_Cupid_App.framework */; };
 		E0482755D3993CCE7E9DF43C /* Pods_Cupid_App_Cupid_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC3F3C9D13CD74B65D405AED /* Pods_Cupid_App_Cupid_AppUITests.framework */; };
+		FF2A10182551103C00B3C9C0 /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF2A10172551103C00B3C9C0 /* ProfileView.xib */; };
+		FF2A101D2551105300B3C9C0 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2A101C2551105300B3C9C0 /* ProfileView.swift */; };
+		FF2A535D25509D43004EEF1D /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2A535C25509D43004EEF1D /* LocationView.swift */; };
+		FF2A536425509D69004EEF1D /* LocationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF2A536325509D69004EEF1D /* LocationView.xib */; };
 		FF2AE4C025473400004D7719 /* CupidViewModel+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2AE4BF25473400004D7719 /* CupidViewModel+Ext.swift */; };
 		FF2AE4C9254756F9004D7719 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2AE4C8254756F9004D7719 /* FavoriteViewController.swift */; };
 		FF2AE4CE254757A8004D7719 /* FavoritePersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2AE4CD254757A8004D7719 /* FavoritePersonTableViewCell.swift */; };
 		FF2AE4D325475CDD004D7719 /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2AE4D225475CDD004D7719 /* FavoriteViewModel.swift */; };
 		FF2AE4D825476E96004D7719 /* CupidViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2AE4D725476E96004D7719 /* CupidViewModelTest.swift */; };
+		FF2C60A625513A390056E81B /* PhoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2C60A525513A390056E81B /* PhoneView.swift */; };
+		FF2C60AB25513A430056E81B /* PhoneView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF2C60AA25513A430056E81B /* PhoneView.xib */; };
+		FF2C60B025513D2F0056E81B /* LockView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF2C60AF25513D2F0056E81B /* LockView.xib */; };
+		FF2C60B525513D3B0056E81B /* LockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2C60B425513D3B0056E81B /* LockView.swift */; };
 		FF36B1412549D0CF00EA1BB6 /* BirthdayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF36B1402549D0CF00EA1BB6 /* BirthdayView.swift */; };
 		FF36B1492549D0D900EA1BB6 /* BirthdayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF36B1482549D0D900EA1BB6 /* BirthdayView.xib */; };
 		FFE29D0B254675DB00107F00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE29D0A254675DB00107F00 /* AppDelegate.swift */; };
@@ -60,11 +68,19 @@
 		A29D1222F14589B81F1E472F /* Pods-Cupid AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cupid AppTests.debug.xcconfig"; path = "Target Support Files/Pods-Cupid AppTests/Pods-Cupid AppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B89E302174FE0C1A8CA690C8 /* Pods-Cupid AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cupid AppTests.release.xcconfig"; path = "Target Support Files/Pods-Cupid AppTests/Pods-Cupid AppTests.release.xcconfig"; sourceTree = "<group>"; };
 		DC3F3C9D13CD74B65D405AED /* Pods_Cupid_App_Cupid_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cupid_App_Cupid_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF2A10172551103C00B3C9C0 /* ProfileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileView.xib; sourceTree = "<group>"; };
+		FF2A101C2551105300B3C9C0 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		FF2A535C25509D43004EEF1D /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
+		FF2A536325509D69004EEF1D /* LocationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationView.xib; sourceTree = "<group>"; };
 		FF2AE4BF25473400004D7719 /* CupidViewModel+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CupidViewModel+Ext.swift"; sourceTree = "<group>"; };
 		FF2AE4C8254756F9004D7719 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		FF2AE4CD254757A8004D7719 /* FavoritePersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePersonTableViewCell.swift; sourceTree = "<group>"; };
 		FF2AE4D225475CDD004D7719 /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
 		FF2AE4D725476E96004D7719 /* CupidViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupidViewModelTest.swift; sourceTree = "<group>"; };
+		FF2C60A525513A390056E81B /* PhoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneView.swift; sourceTree = "<group>"; };
+		FF2C60AA25513A430056E81B /* PhoneView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhoneView.xib; sourceTree = "<group>"; };
+		FF2C60AF25513D2F0056E81B /* LockView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LockView.xib; sourceTree = "<group>"; };
+		FF2C60B425513D3B0056E81B /* LockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockView.swift; sourceTree = "<group>"; };
 		FF36B1402549D0CF00EA1BB6 /* BirthdayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayView.swift; sourceTree = "<group>"; };
 		FF36B1482549D0D900EA1BB6 /* BirthdayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BirthdayView.xib; sourceTree = "<group>"; };
 		FFE29D07254675DB00107F00 /* Cupid App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cupid App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +156,51 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		FF2A536125509D4B004EEF1D /* BirthdayView */ = {
+			isa = PBXGroup;
+			children = (
+				FF36B1402549D0CF00EA1BB6 /* BirthdayView.swift */,
+				FF36B1482549D0D900EA1BB6 /* BirthdayView.xib */,
+			);
+			path = BirthdayView;
+			sourceTree = "<group>";
+		};
+		FF2A536225509D51004EEF1D /* LocationView */ = {
+			isa = PBXGroup;
+			children = (
+				FF2A535C25509D43004EEF1D /* LocationView.swift */,
+				FF2A536325509D69004EEF1D /* LocationView.xib */,
+			);
+			path = LocationView;
+			sourceTree = "<group>";
+		};
+		FF2A536825509D77004EEF1D /* ProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				FF2A10172551103C00B3C9C0 /* ProfileView.xib */,
+				FF2A101C2551105300B3C9C0 /* ProfileView.swift */,
+			);
+			path = ProfileView;
+			sourceTree = "<group>";
+		};
+		FF2A536925509D90004EEF1D /* PhoneView */ = {
+			isa = PBXGroup;
+			children = (
+				FF2C60A525513A390056E81B /* PhoneView.swift */,
+				FF2C60AA25513A430056E81B /* PhoneView.xib */,
+			);
+			path = PhoneView;
+			sourceTree = "<group>";
+		};
+		FF2A536A25509D97004EEF1D /* LockView */ = {
+			isa = PBXGroup;
+			children = (
+				FF2C60AF25513D2F0056E81B /* LockView.xib */,
+				FF2C60B425513D3B0056E81B /* LockView.swift */,
+			);
+			path = LockView;
+			sourceTree = "<group>";
+		};
 		FF2AE4C425475647004D7719 /* FavoriteSceen */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,8 +247,11 @@
 		FF36B13E2549CEB900EA1BB6 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FF36B1402549D0CF00EA1BB6 /* BirthdayView.swift */,
-				FF36B1482549D0D900EA1BB6 /* BirthdayView.xib */,
+				FF2A536A25509D97004EEF1D /* LockView */,
+				FF2A536925509D90004EEF1D /* PhoneView */,
+				FF2A536825509D77004EEF1D /* ProfileView */,
+				FF2A536225509D51004EEF1D /* LocationView */,
+				FF2A536125509D4B004EEF1D /* BirthdayView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -445,6 +509,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFE29D17254675DD00107F00 /* LaunchScreen.storyboard in Resources */,
+				FF2A536425509D69004EEF1D /* LocationView.xib in Resources */,
+				FF2C60B025513D2F0056E81B /* LockView.xib in Resources */,
+				FF2A10182551103C00B3C9C0 /* ProfileView.xib in Resources */,
+				FF2C60AB25513A430056E81B /* PhoneView.xib in Resources */,
 				FF36B1492549D0D900EA1BB6 /* BirthdayView.xib in Resources */,
 				FFE29D7C254686BD00107F00 /* PersonView.xib in Resources */,
 				FFE29D14254675DD00107F00 /* Assets.xcassets in Resources */,
@@ -598,14 +666,18 @@
 				FFE29D0B254675DB00107F00 /* AppDelegate.swift in Sources */,
 				FFE29D57254679CF00107F00 /* Person.swift in Sources */,
 				FF2AE4CE254757A8004D7719 /* FavoritePersonTableViewCell.swift in Sources */,
+				FF2C60B525513D3B0056E81B /* LockView.swift in Sources */,
 				FF2AE4C9254756F9004D7719 /* FavoriteViewController.swift in Sources */,
 				FF2AE4D325475CDD004D7719 /* FavoriteViewModel.swift in Sources */,
+				FF2A101D2551105300B3C9C0 /* ProfileView.swift in Sources */,
 				FF36B1412549D0CF00EA1BB6 /* BirthdayView.swift in Sources */,
 				FFE29D0D254675DB00107F00 /* SceneDelegate.swift in Sources */,
 				FFE29D6F25467F7E00107F00 /* CupidViewModel.swift in Sources */,
 				FFE29D6525467E3D00107F00 /* NetworkManager.swift in Sources */,
+				FF2A535D25509D43004EEF1D /* LocationView.swift in Sources */,
 				FFE29D772546868200107F00 /* PersonView.swift in Sources */,
 				FF2AE4C025473400004D7719 /* CupidViewModel+Ext.swift in Sources */,
+				FF2C60A625513A390056E81B /* PhoneView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

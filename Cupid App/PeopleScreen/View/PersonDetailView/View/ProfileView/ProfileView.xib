@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="ProfileView" id="iN0-l3-epB" customClass="ProfileView" customModule="Cupid_App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="423"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sua-ja-FKK">
+                    <rect key="frame" x="87" y="64" width="240" height="240"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="240" id="Nx8-Ua-cEB"/>
+                        <constraint firstAttribute="width" constant="240" id="jnV-9Z-Fjj"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My name is" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nkB-g7-tUa">
+                    <rect key="frame" x="163.5" y="334" width="87" height="21"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" systemColor="systemGray3Color"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4rN-cq-DOK">
+                    <rect key="frame" x="159" y="375" width="96" height="24"/>
+                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="nkB-g7-tUa" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="95K-pp-I2F"/>
+                <constraint firstItem="sua-ja-FKK" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="Gib-JO-Hs9"/>
+                <constraint firstItem="4rN-cq-DOK" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Gze-ZN-66I"/>
+                <constraint firstItem="4rN-cq-DOK" firstAttribute="top" secondItem="nkB-g7-tUa" secondAttribute="bottom" constant="20" id="Qqd-eL-rDU"/>
+                <constraint firstItem="sua-ja-FKK" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="R5b-Zw-fbp"/>
+                <constraint firstItem="nkB-g7-tUa" firstAttribute="top" secondItem="sua-ja-FKK" secondAttribute="bottom" constant="30" id="qrh-UA-PUY"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="fullNameLabel" destination="4rN-cq-DOK" id="DiW-yT-9tG"/>
+                <outlet property="imageView" destination="sua-ja-FKK" id="9l4-9s-ktL"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="125.55803571428571"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

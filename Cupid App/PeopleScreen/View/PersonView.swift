@@ -22,11 +22,19 @@ protocol PersonViewDelegate: AnyObject {
 class PersonView: UIView {
 
     // MARK: - IBOutlets
-    @IBOutlet private weak var imageView: UIImageView!
-    @IBOutlet private weak var fullNameLabel: UILabel!
+
     @IBOutlet private weak var panGestureRecognizer: UIPanGestureRecognizer!
     
+    @IBOutlet private weak var tabBar: UITabBar!
+    @IBOutlet private weak var personTabBarItem: UITabBarItem!
+    @IBOutlet private weak var birthdayTabBarItem: UITabBarItem!
+    @IBOutlet private weak var locationTabBarItem: UITabBarItem!
+    @IBOutlet private weak var phoneTabBarItem: UITabBarItem!
+    @IBOutlet private weak var lockTabBarItem: UITabBarItem!
+    
     private var _person: Person?
+    private var personDetailViews: [String: UIView] = [:]
+    @IBOutlet private weak var personDetailView: UIView!
     
     var person: Person {
         return self._person ?? Person()
@@ -45,22 +53,57 @@ class PersonView: UIView {
     /*
      * Initializing View
      */
-    private func setupView() {
-        layer.cornerRadius = 10
-        clipsToBounds = true
-        backgroundColor = .white
-    }
-    
+
     func configUIData(with person: Person) {
         self._person = person
         
-        imageView.layer.cornerRadius = 10
+        self.tabBar.selectedItem = personTabBarItem
+        self.setTabIconsAlignment()
+        self.initializeDetailViews()
         
-        guard let url = URL(string: person.picture?.large ?? "") else {
-            return
+        if let view = self.personDetailViews[ProfileView.reuseIdentifier] {
+            self.personDetailView.bringSubviewToFront(view)
         }
-        self.fullNameLabel.text = person.fullName
-        self.imageView.sd_setImage(with: url, completed: nil)
+    }
+    
+    private func setTabIconsAlignment() {
+        self.locationTabBarItem.imageInsets = UIEdgeInsets(top: -5, left: 0, bottom: 5, right: 0)
+        self.phoneTabBarItem.imageInsets = UIEdgeInsets(top: -5, left: 0, bottom: 5, right: 0)
+        self.lockTabBarItem.imageInsets = UIEdgeInsets(top: -5, left: 0, bottom: 5, right: 0)
+    }
+    
+    private func initializeDetailViews() {
+        if let profileView = UIView.viewFromNibName(ProfileView.reuseIdentifier) as? ProfileView {
+            profileView.configUIData(with: self.person)
+            profileView.frame = self.personDetailView.bounds
+            self.personDetailViews[ProfileView.reuseIdentifier] = profileView
+            self.personDetailView.addSubview(profileView)
+        }
+        if let birthdayView = UIView.viewFromNibName(BirthdayView.reuseIdentifier) as? BirthdayView {
+            birthdayView.configUIData(with: self.person)
+            birthdayView.frame = self.personDetailView.bounds
+            self.personDetailViews[BirthdayView.reuseIdentifier] = birthdayView
+            self.personDetailView.addSubview(birthdayView)
+        }
+        if let locationView = UIView.viewFromNibName(LocationView.reuseIdentifier) as? LocationView {
+            locationView.configUIData(withPerson: self.person)
+            locationView.frame = self.personDetailView.bounds
+            self.personDetailViews[LocationView.reuseIdentifier] = locationView
+            self.personDetailView.addSubview(locationView)
+        }
+        if let phoneView = UIView.viewFromNibName(PhoneView.reuseIdentifier) as? PhoneView {
+            phoneView.configUIData(with: self.person)
+            phoneView.frame = self.personDetailView.bounds
+            self.personDetailViews[PhoneView.reuseIdentifier] = phoneView
+            self.personDetailView.addSubview(phoneView)
+        }
+        
+        if let lockView = UIView.viewFromNibName(LockView.reuseIdentifier) as? LockView {
+            lockView.configUIData(with: self.person)
+            lockView.frame = self.personDetailView.bounds
+            self.personDetailViews[LockView.reuseIdentifier] = lockView
+            self.personDetailView.addSubview(lockView)
+        }
     }
     
     @IBAction private func panGestureBeingDragged(_ sender: Any) {
@@ -128,5 +171,36 @@ class PersonView: UIView {
         case .none:
             break
         }
+    }
+}
+
+extension PersonView: UITabBarDelegate {
+    func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        
+        var tempView: UIView?
+        switch item.tag {
+        case 0: // ProfileView
+            tempView = self.personDetailViews[ProfileView.reuseIdentifier]
+        
+        case 1: // BirthdayView
+            tempView = self.personDetailViews[BirthdayView.reuseIdentifier]
+            
+        case 2: // LocationView
+            tempView = self.personDetailViews[LocationView.reuseIdentifier]
+            
+        case 3: // PhoneView
+            tempView = self.personDetailViews[PhoneView.reuseIdentifier]
+            
+        case 4:
+            tempView = self.personDetailViews[LockView.reuseIdentifier]
+            
+        default:
+            break
+        }
+        
+        guard let view = tempView else {
+            print("Error tabBar(_ tabBar: UITabBar, didSelect")
+            return }
+        self.personDetailView.bringSubviewToFront(view)
     }
 }

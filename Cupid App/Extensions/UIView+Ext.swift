@@ -20,3 +20,11 @@ extension UIView {
         String(describing: self)
     }
 }
+
+extension UIView {
+    func setupView() {
+        layer.cornerRadius = 10
+        clipsToBounds = true
+        backgroundColor = .white
+    }
+}

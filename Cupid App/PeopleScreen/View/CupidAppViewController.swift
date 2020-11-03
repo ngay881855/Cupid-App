@@ -22,7 +22,7 @@ class CupidAppViewController: UIViewController {
         model = CupidViewModel()
         model?.delegate = self
         model?.reloadData()
-        
+
         setupNotificationForFavoriteViewController()
     }
     

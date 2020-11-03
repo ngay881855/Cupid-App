@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="PhoneView" id="iN0-l3-epB" customClass="PhoneView" customModule="Cupid_App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="455"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mobile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CR9-eN-aDD">
+                    <rect key="frame" x="179.5" y="217" width="55" height="21"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hea-yw-F0c">
+                    <rect key="frame" x="191.5" y="246" width="31.5" height="21"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="CR9-eN-aDD" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="KKu-vQ-A9U"/>
+                <constraint firstItem="hea-yw-F0c" firstAttribute="top" secondItem="CR9-eN-aDD" secondAttribute="bottom" constant="8" symbolic="YES" id="Wnu-fk-OSY"/>
+                <constraint firstItem="CR9-eN-aDD" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="d1c-9Z-q5B"/>
+                <constraint firstItem="hea-yw-F0c" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="lB1-3U-z4d"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="cellPhoneLabel" destination="hea-yw-F0c" id="K6Q-pr-gOp"/>
+                <outlet property="mobileLabel" destination="CR9-eN-aDD" id="TE9-rz-JLR"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="104.79910714285714"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
