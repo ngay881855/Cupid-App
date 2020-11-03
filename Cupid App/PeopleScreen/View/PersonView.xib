@@ -18,7 +18,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VN3-YI-ndD">
                     <rect key="frame" x="0.0" y="44" width="414" height="665"/>
                     <subviews>
-                        <tabBar clipsSubviews="YES" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gld-DJ-AhH">
+                        <tabBar clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gld-DJ-AhH">
                             <rect key="frame" x="0.0" y="616" width="414" height="49"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
@@ -37,7 +37,7 @@
                             </connections>
                         </tabBar>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C8Y-nV-j7k" userLabel="Person Detail View">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="616"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="609"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
                     </subviews>
@@ -46,7 +46,7 @@
                         <constraint firstItem="C8Y-nV-j7k" firstAttribute="leading" secondItem="VN3-YI-ndD" secondAttribute="leading" id="1mm-0k-qR4"/>
                         <constraint firstAttribute="trailing" secondItem="C8Y-nV-j7k" secondAttribute="trailing" id="AkZ-kF-amE"/>
                         <constraint firstItem="gld-DJ-AhH" firstAttribute="leading" secondItem="VN3-YI-ndD" secondAttribute="leading" id="Dby-E5-GN4"/>
-                        <constraint firstItem="gld-DJ-AhH" firstAttribute="top" secondItem="C8Y-nV-j7k" secondAttribute="bottom" id="Ze5-yw-Cow"/>
+                        <constraint firstItem="gld-DJ-AhH" firstAttribute="top" secondItem="C8Y-nV-j7k" secondAttribute="bottom" constant="7" id="Ze5-yw-Cow"/>
                         <constraint firstAttribute="bottom" secondItem="gld-DJ-AhH" secondAttribute="bottom" id="cxz-zs-iu2"/>
                         <constraint firstItem="C8Y-nV-j7k" firstAttribute="top" secondItem="VN3-YI-ndD" secondAttribute="top" id="nRP-l6-I3Y"/>
                         <constraint firstAttribute="trailing" secondItem="gld-DJ-AhH" secondAttribute="trailing" id="u0h-ai-Fd1"/>
